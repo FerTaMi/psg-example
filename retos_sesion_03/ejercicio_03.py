@@ -24,4 +24,4 @@ print("   - Coloca los platos en un escurridor con ranuras para que escurran.")
 print("   - Para evitar manchas, sécalos con un trapo limpio de algodón (opcional).")
 print("   - Guarda los platos secos en el armario.")
 
-print("¡LISTO! PLATOS LIMPIOS Y BIEN CUIDADOS")
+print("¡LISTO! PLATOS LIMPIOS Y BIEN CUIDADOS") 
