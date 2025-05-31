@@ -1,0 +1,5 @@
+print("XNOR usando 'not xor' con True y False")
+print(True == True) 
+print(True == False)  
+print(False == True)  
+print(False == False) 
