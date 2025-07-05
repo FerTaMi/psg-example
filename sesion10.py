@@ -414,9 +414,9 @@ print(type(conjunto))
 
 
 conjunto = frozenset({1, 2, 3, 4, 5})
-print(conjunto)
-print(conjunto.add(6)) # AttributeError: 'frozenset' object has no attribute 'add'
-print(conjunto.remove(1)) # AttributeError: 'frozenset' object has no attribute 'remove'
+#print(conjunto)
+#print(conjunto.add(6)) # AttributeError: 'frozenset' object has no attribute 'add'
+#print(conjunto.remove(1)) # AttributeError: 'frozenset' object has no attribute 'remove'
 #print(conjunto |= {6}) # SyntaxError: invalid syntax
 
 
@@ -424,3 +424,32 @@ print ("Conjunto de conjuntos")
 conjunto = {frozenset({'🍅','🍓','🍎'}), frozenset({'🍈','🍐','🍏'})}
 print(conjunto)
 print(type(conjunto))
+
+# Parte 1: frozenset no se puede modificar
+conjunto = frozenset({1, 2, 3, 4, 5})
+print("Conjunto original (frozenset):", conjunto)
+
+# Parte 2: conjunto de conjuntos usando frozenset
+print("\nConjunto de conjuntos")
+conjunto_conjuntos = {
+    frozenset({'🍅', '🍓', '🍎'}),
+    frozenset({'🍈', '🍐', '🍏'})
+}
+print(conjunto_conjuntos)
+print(type(conjunto_conjuntos))
+
+# frozenset es inmutable: no se puede agregar, quitar ni modificar
+
+conjunto = frozenset({1, 2, 3, 4, 5})
+print("Conjunto original (frozenset):", conjunto)
+
+# No intentamos modificarlo, porque daría error
+
+print("\nConjunto de conjuntos")
+conjunto_de_conjuntos = {
+    frozenset({'🍅', '🍓', '🍎'}),
+    frozenset({'🍈', '🍐', '🍏'})
+}
+print(conjunto_de_conjuntos)
+print(type(conjunto_de_conjuntos))
+
