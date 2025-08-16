@@ -1,26 +1,5 @@
 
-
-#frutas_permitidas = ["🍅", "🍇", "🍈", "🍉", "🍊", "🍌", "🍍", "🍑"]
-#canasta = []
-
-#while True
-#    fruta = input("Ingresa una fruta: ")
-
-#    if fruta == "salir"
-#        break
-
-#    if fruta not in frutas_permitidas
-#        raise Exception("Fruta no permitida")
-
-#    canasta.append(fruta)
-
-#print("Canasta:", canasta)
-
-
-#
-
-class FrutaNoValidaError(Exception):
-    pass
+#2
 
 frutas_permitidas = ["🍅", "🍇", "🍈", "🍉", "🍊", "🍌", "🍍", "🍑"]
 canasta = []
@@ -28,13 +7,16 @@ canasta = []
 while True:
     fruta = input("Ingresa una fruta (o 'salir' para terminar): ")
 
-    if fruta == "salir":
+    if fruta.lower() == "salir":
+        print("Adiós 👋")
         break
 
     if fruta not in frutas_permitidas:
-
-        raise FrutaNoValidaError(f"La fruta '{fruta}' no es válida.")
+        print(f"💀 La fruta '{fruta}' no está permitida. Intenta de nuevo.")
+        continue   # vuelve al inicio del while
 
     canasta.append(fruta)
+    print(f"✅ '{fruta}' agregada a la canasta.")
 
-print("Canasta:", canasta)
+print("\n Canasta final:", canasta)
+
