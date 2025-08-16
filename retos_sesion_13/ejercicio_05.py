@@ -1,9 +1,8 @@
 #tblero de ajedrez
-for fila in range(8):
-    linea = ""
-    for col in range(8):
-        if (fila + col) % 2 == 0:
-            linea += "#"
-        else:
-            linea += "✨"
-    print(linea)
+patron = ["#*", "*#"]  # fila par, fila impar
+fila_actual = 0
+
+for _ in range(8):
+    print(patron[fila_actual] * 4)
+    # alternamos la fila
+    fila_actual = 1 - fila_actual
