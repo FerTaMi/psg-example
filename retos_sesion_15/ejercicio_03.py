@@ -1,27 +1,26 @@
-#saldo = 500
-
-#monto = int(input("Ingrese el monto a retirar: "))
-
-#if monto > saldo
-#    raise Exception("No hay fondos suficiente")
-
-#if monto > 1000:
-#    raise Exception("Monto excede el limite permitido")
-    
-#print("Retiro exitoso")
+#3
 
 class FondosInsuficientesError(Exception):
     pass
 
 saldo = 500
 
-monto = int(input("Ingrese el monto a retirar: "))
+try:
+    monto = int(input("Ingrese el monto a retirar: "))
 
-if monto > saldo:
-    raise FondosInsuficientesError("No hay fondos suficientes")
+    if monto > saldo:
+        raise FondosInsuficientesError("No hay fondos suficientes.")
 
-if monto > 1000:
-    raise Exception("Monto excede el limite permitido")
-    
-print("Retiro exitoso")
+    if monto > 1000:
+        raise Exception("💀 Monto excede el límite permitido por transacción.")
+
+    saldo -= monto
+    print(f"✅ Retiro exitoso. Nuevo saldo: {saldo}")
+
+except ValueError:
+    print("Error: Ingresa un número válido.")
+except FondosInsuficientesError as e:
+    print(e)
+except Exception as e:
+    print(e)
 
