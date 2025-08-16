@@ -42,6 +42,6 @@ def jugar():
         adivina(secreto)
     
     print("Gracias por participar!")
-    print(f"🐍 Gracias {nombre_jugador.upper()} por ser parte del Python Study Group 2025! 🐍")
+    print(f"Gracias {nombre_jugador.upper()} por ser parte del Python Study Group 2025! 🐍")
 
 jugar()
