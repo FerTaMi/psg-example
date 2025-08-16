@@ -1,4 +1,4 @@
-# Diccionario inicial del arca
+#diccionario inicial del arca
 arca = {
     "🐶": 2,
     "🐱": 2,
@@ -15,25 +15,32 @@ arca.update({
     "🐢": 2
 })
 
-#Lista de animales en el arca
+#mostrar la lista de animales
 print("Animales en el arca:")
-for especie, cantidad in arca.items():
-    print(f"{especie}: {cantidad}")
+animales_iter = iter(arca)  # Creamos un iterador sobre las claves
+while True:
+    try:
+        especie = next(animales_iter)
+        cantidad = arca[especie]
+        print(f"{especie}: {cantidad}")
+    except StopIteration:
+        break
 
-#existe el 🐲 dragón en el arca?
+#verificar si el dragón está en el arca
 print("\n¿Está el 🐲 dragón en el arca?")
 print("🐲" in arca)  # False
 
-#eliminar el 🦄 unicornio
+#eliminar el unicornio
 arca.pop("🦄")
 
-#modificar cantidad de 🦒 jirafa a 2
+#mdificar cantidad de 🦒 jirafa a 2
 arca["🦒"] = 2
 
-# Vaciar el arca después del diluvio
+#vaciar el arca después del diluvio
 arca.clear()
 
-#arca vacia
+#arca vacía
 print("\nArca después del diluvio:")
 print(arca)  # {}
+
 
