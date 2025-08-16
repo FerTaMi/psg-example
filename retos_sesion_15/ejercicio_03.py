@@ -12,10 +12,10 @@ try:
         raise FondosInsuficientesError("No hay fondos suficientes.")
 
     if monto > 1000:
-        raise Exception("💀 Monto excede el límite permitido por transacción.")
+        raise Exception("Monto excede el límite permitido por transacción.")
 
     saldo -= monto
-    print(f"✅ Retiro exitoso. Nuevo saldo: {saldo}")
+    print(f"Retiro exitoso. Nuevo saldo: {saldo}")
 
 except ValueError:
     print("Error: Ingresa un número válido.")
