@@ -1,4 +1,4 @@
-# Diccionario de hábitats con especies en peligro
+#hsbitats con especies en peligro
 habitats = {
     "polo norte": {
         "especies": {"oso polar", "morsa", "ballena"}
@@ -8,22 +8,7 @@ habitats = {
     }
 }
 
-# Mostrar la información de los hábitats
-print("Hábitats en peligro y especies:")
-for zona, datos in habitats.items():
-    print(f"- {zona.title()}: {', '.join(datos['especies'])}")
-
-# base de hábitats
-habitats = {
-    "polo norte" : {
-        "especies": {"oso polar", "morsa", "ballena"}
-    },
-    "amazonas" : {
-        "especies": {"tigre", "mono", "guacamayo"}
-    }
-}
-
-# 2 hábitats
+# Agregar más hábitat
 habitats.update({
     "sabana africana": {
         "especies": {"león", "elefante"}
@@ -33,13 +18,15 @@ habitats.update({
     }
 })
 
-#Existe el hábitat "amazonas"?
-print("amazonas" in habitats)  # True
+#verificar si existe el hábitat "amazonas"
+print("¿Existe el hábitat 'amazonas'?", "amazonas" in habitats)
 
-#Añadir "anaconda" al hábitat "amazonas"
+#añadir "anaconda" al hábitat "amazonas"
 habitats["amazonas"]["especies"].add("anaconda")
 
 
-print("\nHábitats actualizados:")
-for zona, datos in habitats.items():
-    print(f"- {zona.title()}: {', '.join(datos['especies'])}")
+print("\nHábitats en peligro y especies:")
+print("Polo Norte:", habitats["polo norte"]["especies"])
+print("Amazonas:", habitats["amazonas"]["especies"])
+print("Sabana Africana:", habitats["sabana africana"]["especies"])
+print("Océano Pacífico:", habitats["océano pacífico"]["especies"])
