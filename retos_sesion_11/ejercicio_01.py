@@ -4,14 +4,14 @@ animal = {
     "hábitat": "Océano Pacífico",
     "dieta": "Crustáceos y peces pequeños",
     "estado_de_salud": "Saludable",
-    "edad": 4
+    "edad": 4,
+    "cuidadores": {"Lucía", "Carlos", "Mateo"}
 }
 
-
-cuidadores = {"Lucía", "Carlos", "Mateo"}
-
+#información del animal
 print("Información del animal marino:")
-print(animal)
+for clave, valor in animal.items():
+    print(f"{clave}: {valor}")
 
-print("\nCuidadores responsables:")
-print(cuidadores)
+
+
